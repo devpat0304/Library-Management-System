@@ -25,7 +25,7 @@ It emphasizes practical experience in:
 
 The user interface allows intuitive operations such as:
 
-> _Searching for books, checking availability by branch, checking out and returning books, and creating borrower accounts — all executed through robust SQL interactions behind the scenes._
+> _Searching for books, checking availability by branch, checking out and returning books, and creating borrower accounts — all executed through SQL interactions behind the scenes._
 
 ---
 
