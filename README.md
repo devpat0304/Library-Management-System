@@ -104,7 +104,7 @@ This section outlines the schema design of the Library Management System databas
 
   ---
 
-## 📁 Project File Descriptions – Library Management System
+## 📁 Project File Descriptions 
 
 This section provides a structured overview of all major files used in the **Library Management System** project. The files are grouped by folder for clarity and each entry includes a short description of its role in the system.
 
