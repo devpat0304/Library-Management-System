@@ -302,3 +302,45 @@ ORDER BY Borrow_Count DESC;
 > Analytical query to assess popular books at different branches.
 </details>
 
+## 🧠 Entity-Relationship Diagram (ERD)
+
+The **Entity-Relationship Diagram (ERD)** provides a visual overview of the relationships between tables in the **Library Management System**. It illustrates how entities are connected through primary and foreign keys.
+
+---
+
+### 🗂️ Entities Overview
+
+| Entity               | Description                                                                 |
+|----------------------|-----------------------------------------------------------------------------|
+| **Books**            | Stores metadata for each book, including title, publisher, and unique ID.  |
+| **Authors**          | Contains information about book authors and maps them to written books.    |
+| **Library_Branches** | Details about each library branch, including address and name.             |
+| **Book_Copies**      | Tracks how many copies of a book exist at each branch.                     |
+| **Borrowers**        | Contains library member details like name, address, and card number.       |
+| **Book_Loans**       | Records borrowing transactions, dates, and involved entities.              |
+
+---
+
+### 🔗 Relationships
+
+- `Book_Copies` → **Many-to-One** → `Books` and `Library_Branches`  
+- `Book_Authors` → **Many-to-One** → `Books` and `Authors`  
+- `Book_Loans` → **Many-to-One** → `Books`, `Borrowers`, and `Library_Branches`  
+
+These links allow you to track inventory, borrowing history, and author contributions across multiple branches.
+
+---
+
+### 🔒 Primary & Foreign Keys
+
+| Table          | Primary Key                              | Foreign Keys                                                            |
+|----------------|-------------------------------------------|-------------------------------------------------------------------------|
+| **Books**       | `Book_ID`                                 | —                                                                       |
+| **Authors**     | `Author_ID`                               | —                                                                       |
+| **Library_Branches** | `Branch_ID`                          | —                                                                       |
+| **Borrowers**   | `Card_No`                                 | —                                                                       |
+| **Book_Copies** | `(Book_ID, Branch_ID)`                    | `Book_ID` → Books, `Branch_ID` → Library_Branches                      |
+| **Book_Loans**  | `(Book_ID, Branch_ID, Card_No, Date_Out)` | `Book_ID` → Books, `Branch_ID` → Library_Branches, `Card_No` → Borrowers |
+
+This schema structure promotes data integrity, normalization, and efficient querying.
+"""
