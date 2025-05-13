@@ -104,31 +104,31 @@ This section outlines the schema design of the Library Management System databas
 
   ---
 
-  # 📁 Project File Descriptions – Library Management System
+## 📁 Project File Descriptions – Library Management System
 
 This section provides a structured overview of all major files used in the **Library Management System** project. The files are grouped by folder for clarity and each entry includes a short description of its role in the system.
 
 ---
 
-## 📦 Folder: `Reports/`
+### 📦 Folder: `Reports/`
 
-### `Phase1_Report.pdf`
+#### `Phase1_Report.pdf`
 Describes the **conceptual and ER modeling** of the database, including an Entity-Relationship Diagram and schema justification. This sets the foundation for the database structure.
 
-### `Phase2_Report.pdf`
+#### `Phase2_Report.pdf`
 Covers the **implementation phase**, including SQL `CREATE TABLE` statements, data population strategies, and initial schema testing.
 
-### `Phase3_Report.pdf`
+#### `Phase3_Report.pdf`
 Focuses on **application integration** and the **Python GUI**, along with SQL query implementation and testing procedures.
 
 ---
 
-## 🧮 File: `Library_Database_SchemaData.sql`
+### 🧮 File: `Library_Database_SchemaData.sql`
 This SQL script includes the schema used to create the **entire database**, including table creation, primary/foreign keys, and constraints. This is the foundation for the database layer.
 
 ---
 
-## 🖼️ File: `Library_Management_GUI.py`
+### 🖼️ File: `Library_Management_GUI.py`
 A **Tkinter-based Python GUI** application that interacts with the library database. Allows users to:
 - View available books
 - Loan or return books
@@ -137,26 +137,26 @@ A **Tkinter-based Python GUI** application that interacts with the library datab
 
 ---
 
-## 📂 Folder: `Dataset_Spreadsheets/`
+### 📂 Folder: `Dataset_Spreadsheets/`
 
 These CSV files represent the **initial data** loaded into the system. Each file corresponds to a relational table in the library database:
 
-### `Books_Table.csv`
+#### `Books_Table.csv`
 Contains ISBN, book title, and publisher name.
 
-### `Book_Authors_Table.csv`
+#### `Book_Authors_Table.csv`
 Maps books to their authors. Supports **many-to-many** relationships between books and authors.
 
-### `Library_Branches_Table.csv`
+#### `Library_Branches_Table.csv`
 Defines library branches, including address and name. Each branch hosts book copies.
 
-### `Book_Copies_Table.csv`
+#### `Book_Copies_Table.csv`
 Links books to branches and tracks how many copies are available at each.
 
-### `Borrowers_Table.csv`
+#### `Borrowers_Table.csv`
 Stores borrower records, including names, addresses, and unique card numbers.
 
-### `Book_Loans_Table.csv`
+#### `Book_Loans_Table.csv`
 Tracks which borrower checked out which book and when. Also used for overdue and return date checks.
 
 ---
