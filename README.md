@@ -161,5 +161,66 @@ Tracks which borrower checked out which book and when. Also used for overdue and
 
 ---
 
+## 📥 How to Run the Project
+
+This section provides step-by-step instructions to set up and run the **Library Management System** on your local machine.
+
+---
+
+### 🔧 Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+- 🐍 **Python 3.x**
+- 🗃️ **SQLite** or a GUI tool like **SQLiteStudio**
+- 🧰 Python standard libraries (used in script):
+  - `sqlite3` (for database operations)
+  - `tkinter` (for GUI interface)
+  - `os` (for file operations)
+
+> All required libraries are part of the Python standard library, so no additional installation should be needed.
+
+---
+
+### 🚀 Steps to Run
+
+1. **Clone or Download the Repository**
+
+   Download or clone the project folder from your source (GitHub, ZIP, etc.).
+
+2. **Load the Database Schema**
+
+   - Open `Library_Database_SchemaData.sql` using SQLiteStudio or the `sqlite3` CLI tool.
+   - Run the SQL script to create all necessary tables and populate initial data.
+
+3. **Open the GUI Application Script**
+
+   - Locate the file `Library_Management_GUI.py`.
+   - Open it using any Python IDE or a text editor.
+
+4. **Run the Python Script**
+
+   ```bash
+   python Library_Management_GUI.py
+   ```
+
+5. **Launch the App**
+
+   A window will launch providing the interface to:
+   - Search for books
+   - Loan books to borrowers
+   - Return books
+   - Track book copies across library branches
+
+---
+
+### 📎 Notes
+
+- Make sure the database file is in the expected path or modify the database connection in the script.
+- You can edit or extend the interface using the `tkinter` code provided.
+- If using SQLiteStudio, you can manually inspect table contents or test queries.
+
+---
+
 Each of these files contributes to either **data definition**, **data population**, or **application interaction**, forming a complete relational system for managing a library’s operations.
 
