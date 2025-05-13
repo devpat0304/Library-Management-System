@@ -224,3 +224,81 @@ Before running the project, ensure you have the following installed:
 
 Each of these files contributes to either **data definition**, **data population**, or **application interaction**, forming a complete relational system for managing a library’s operations.
 
+---
+
+# 🔍 Core SQL Queries & Use Cases
+
+Below are key queries written and executed during the Library Management System project across the GUI application and database scripts. Each query aligns with a specific system use case.
+
+<details>
+<summary><strong>📚 1. Display All Books in the Library</strong></summary>
+
+```sql
+SELECT Book_ID, Title, Publisher_Name
+FROM Book;
+```
+
+> Lists every book stored in the library system.
+</details>
+
+<details>
+<summary><strong>👤 2. Get Borrower Details</strong></summary>
+
+```sql
+SELECT Card_No, Name, Address, Phone
+FROM Borrower;
+```
+
+> Retrieves all borrower information for loan tracking or lookups.
+</details>
+
+<details>
+<summary><strong>🏢 3. Available Copies of a Book at a Specific Branch</strong></summary>
+
+```sql
+SELECT No_Of_Copies
+FROM Book_Copies
+WHERE Book_ID = ? AND Branch_ID = ?;
+```
+
+> Used to check stock before a loan is approved.
+</details>
+
+<details>
+<summary><strong>📆 4. Books Currently Loaned Out</strong></summary>
+
+```sql
+SELECT Book_Loans.Book_ID, Title, Card_No, Due_Date
+FROM Book_Loans
+JOIN Book ON Book.Book_ID = Book_Loans.Book_ID
+WHERE Returned_Date IS NULL;
+```
+
+> Shows all books that are still out and not returned.
+</details>
+
+<details>
+<summary><strong>🧾 5. Late Fee Calculation</strong></summary>
+
+```sql
+SELECT JULIANDAY('now') - JULIANDAY(Due_Date) AS Days_Late
+FROM Book_Loans
+WHERE Returned_Date IS NULL AND Due_Date < DATE('now');
+```
+
+> Used in the GUI to compute late fees dynamically.
+</details>
+
+<details>
+<summary><strong>📌 6. Top Borrowed Books by Branch</strong></summary>
+
+```sql
+SELECT Book_ID, COUNT(*) AS Borrow_Count
+FROM Book_Loans
+GROUP BY Book_ID
+ORDER BY Borrow_Count DESC;
+```
+
+> Analytical query to assess popular books at different branches.
+</details>
+
