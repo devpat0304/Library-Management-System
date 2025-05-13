@@ -1,6 +1,6 @@
 # 📚 Library Management System – SQL, Python & GUI Integration
 
-The **Library Management System** is a comprehensive, multi-phase database application engineered to support the full lifecycle of book circulation within a multi-branch library network. Built in **Spring 2025** as part of **CSE 3330: Database Systems** at **The University of Texas at Arlington**, this academic project models real-world library logistics through schema design, data management, and user interaction.
+The **Library Management System** is a comprehensive, multi-phase database application engineered to support the full lifecycle of book circulation within a multi-branch library network. This academic project models real-world library logistics through schema design, data management, and user interaction. This project was developed as part of **CSE 3330: Database Systems and File Structures** at **The University of Texas at Arlington** (Fall 2024).
 
 This project was executed across **three development phases**:
 
