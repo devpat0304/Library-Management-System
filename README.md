@@ -403,5 +403,3 @@ Whether you're a student, developer, or educator, we invite you to:
 - 💡 Suggest improvements
 
 Happy coding and keep learning! 📚💻
-
-Happy coding! 📚💻✨
